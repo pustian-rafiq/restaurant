@@ -1,0 +1,430 @@
+/*
+
+Theme Name: La Pizzeria
+Theme URI:
+Author: Md. Rafiqul Islam
+Author URI:
+Description: Theme for restaurants
+Version: 1.0
+License: GNU General Public License v2 or later
+License URL: http://www.gnu.org/licenses/glp-2.0.html 
+Tags: restaurant, mobile first, responsive, pizza
+Text Domain: LaPizzeria
+
+*/
+/*** Global Styles*/
+
+body{
+    background-color: white;
+}
+
+html{
+    box-sizing: border-box;
+}
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+h1{
+    font-size: 48px;
+}
+h2{
+    font-size: 40px;
+}
+h3{
+    font-size: 28px;
+}
+h4{
+    font-size: 24px;
+}
+.clear,
+.clear::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.container{
+    width: 1100px;
+    max-width: 100%;
+    margin: 0 auto;
+   
+}
+.sr-text{
+    display: none;
+}
+
+.text-center{
+    text-align: center;
+}
+.primary-text{
+    color: #a61206;
+}
+
+/** Header style**/
+header.site-header{
+  border-bottom: 1px solid black;
+  padding-bottom: 30px;
+}
+
+div.logo{
+    text-align: center;
+}
+@media only screen and (min-width: 768px){
+    div.logo{
+        text-align: left;
+    }
+}
+@media only screen and (min-width: 992px){
+    div.logo{
+        text-align: center;
+    }
+}
+
+img.logoimage{
+    width: 250px;
+}
+@media only screen and (min-width: 768px){
+    header.site-header .container{
+        position: relative;
+    }
+    header.site-header .header-information{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+div.address{
+    display: block;
+    clear: both;
+    padding-top:10px;
+}
+div.address p{
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+}
+@media only screen and (min-width: 768px){
+    div.address p{
+        text-align: right;
+    }
+}
+
+/** Social Menus**/
+nav.socials ul{
+    padding: 0;
+    list-style: none;
+    text-align: center;
+
+}
+@media only screen and (min-width: 768px){
+    nav.socials ul{
+       float: right;
+    }
+}
+
+nav.socials ul li{
+     position: relative;
+     display: inline-block;
+}
+nav.socials ul li a::before{
+    font-family: FontAwesome;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 5px;
+    content: '\f08e';
+    font-size: 30px;
+    color: #000000;
+    -webkit-font-smoothing: antialiazed;
+}
+nav.socials li a[href*="facebook.com"]::before{
+    content: '\f09a';
+}
+nav.socials li a[href*="twitter.com"]::before{
+    content: '\f099';
+}
+nav.socials li a[href*="pinterest.com"]::before{
+    content: '\f231';
+}
+nav.socials li a[href*="facebyoutubeook.com"]::before{
+    content: '\f16a';
+}
+nav.socials li a[href*="instagram.com"]::before{
+    content: '\f16d';
+}
+
+/** Main Menu**/
+nav.site-nav{
+   display: none;
+}
+/** display the menu bar  one after another from 768px **/
+@media only screen and (min-width: 768px){
+    nav.site-nav{
+        display: block;
+     }
+}
+
+nav.site-nav ul{
+    list-style:none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: table;
+}
+/** display the menu bar from 768px **/
+@media only screen and (min-width: 768px){
+    nav.site-nav ul li{
+        display: table-cell;
+        width: 1%;
+    }
+}
+nav.site-nav ul li a{
+    text-align: center;
+    padding: 20px 0;
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;font-family: Arial, Helvetica, sans-serif;
+}
+nav.site-nav ul li.current_page_item a{
+    border-bottom: 8px solid #a61286;
+}
+
+/** Responsive Menu Button**/
+@media only screen and (max-width: 767px){
+    .mobile-menu a{
+        height:40px;
+        line-height: 40px;
+        color:white;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #a61206;
+        text-transform: uppercase;
+    }
+}
+@media only screen and (min-width: 767px){
+    .mobile-menu a{
+         
+        display: none;
+        
+    }
+}
+
+/** Hero Image**/
+
+.hero{
+    background-repeat: no-repeat;
+    height: 450px;
+    background-size: cover;
+    background-position: center center;
+    margin: 0 auto;
+    display: table;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+.hero::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+}
+.hero .hero-content{
+    display: table-cell;
+    vertical-align: middle;
+    color: #ffffff;
+    z-index: 2;
+    position: relative;
+}
+@media only screen and (min-width: 768px){
+    .hero-text{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+@media only screen and (min-width: 992px){
+    .hero-text{
+        width: 60%;
+        
+    }
+}
+
+/** Main Content**/
+.main-content{
+    padding: 60px;
+    background-color: #ffffff;
+    position: relative;
+}
+@media only screen and (min-width: 768px){
+    .main-content{
+        margin-top: -90px;
+        
+    }
+}
+
+.content-text{
+    font-size: 18px;
+    line-height: 40px;
+}
+
+/** About Us Boxes  **/
+
+.box-information .single-box{
+    text-align: center;
+    width: 100%;
+    color: #fff;
+}
+.box-information .single-box img{
+    width: 100%;
+    display: block;
+}
+@media only screen and (min-width: 480px){
+    .box-information .single-box{
+        width: 50%;
+        float: left;
+    }
+    .box-information .single-box:last-child{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 768px){
+    .box-information .single-box,
+    .box-information .single-box:last-child {
+        width: 33.3%;
+         
+    }
+     
+}
+
+.box-information .single-box:nth-child(1){
+    background-color: #f19f30;
+}
+.box-information .single-box:nth-child(2){
+    background-color: #127427;
+}
+.box-information .single-box:nth-child(3){
+    background-color: #a61206;
+}
+.box-information .single-box h3{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-top: 0;
+    
+}
+.box-information .single-box{
+    margin-bottom: 0;
+}
+.single-box .content-box{
+    padding: 10px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+/** Footer**/
+
+footer{
+    margin-top: 30px;
+    padding: 30px 0;
+    border-top: 1px solid #c1c1c1;
+    text-align: center;
+}
+footer nav ul{
+    list-style: none;
+}
+footer nav ul li{
+    display: inline;
+}
+footer nav ul li::last-child .separator{
+    display: none;
+}
+
+footer nav ul li a{
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+}
+footer .location{
+    margin-top: 30px;
+}
+footer p{
+    margin:0 0 5px 0;
+    font-size: 14px;
+}
+footer p.copyright{
+    margin-top: 20px;
+}
+
+/** Grid System for pizzas and others**/
+img{
+   max-width: 100%;
+   height: auto;
+}
+@media only screen and (min-width: 768px)
+{
+   .container-grid{
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .container-grid::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    [class*='columns'] {
+        padding: 0 10px;
+        float: left;
+    }
+    .columns1-4{
+        width: 25%;
+    }
+    .columns2-4{
+        width: 50%;
+    }
+    .columns3-4{
+        width: 75%;
+    }
+    .columns1-3{
+        width: 33.3%;
+    }
+    .columns2-3{
+        width: 66.6%;
+    }
+     
+}
+/** Specialties**/
+.our-specialties{
+    padding: 0 60px;
+}
+.specialty-content{
+    padding: 20px;
+}
+.specialty-content a{
+    color: #000000;
+    text-decoration: none;
+}
+.specialty-content h4{
+    border-bottom: 1px solid #dfdfdd;
+    padding: 15px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+.specialty-content h4 span{
+    float: right;
+    font-size: 30px;
+    color: #f19f30;
+    font-family: 'Open Sans',sans-serif;
+}
+.specialty-content p{
+    color: #3d3d3d;
+    line-height: 30px;
+}
